@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.com/tpspace">
-  <title>TPSpace.GitHub.io</title>
+  <title>Tag: Homebrew | TPSpace.GitHub.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="彭涛的博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TPSpace.GitHub.io">
-<meta property="og:url" content="http://github.com/tpspace/index.html">
+<meta property="og:url" content="http://github.com/tpspace/tags/Homebrew/index.html">
 <meta property="og:site_name" content="TPSpace.GitHub.io">
 <meta property="og:description" content="彭涛的博客">
 <meta name="twitter:card" content="summary">
@@ -142,178 +142,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Ruby安装-Mac" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/Ruby安装-Mac/">Ruby安装(Mac)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/09/Ruby安装-Mac/" class="archive-article-date">
-  	<time datetime="2017-05-09T12:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
-</a>
-        
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Ruby安装"><a href="#Ruby安装" class="headerlink" title="Ruby安装"></a><a href="https://ruby-china.org/" target="_blank" rel="external">Ruby</a>安装</h2><h3 id="ruby-install-和-chruby-管理-Ruby"><a href="#ruby-install-和-chruby-管理-Ruby" class="headerlink" title="ruby-install 和 chruby 管理 Ruby"></a>ruby-install 和 chruby 管理 Ruby</h3><p><a href="https://github.com/postmodern/ruby-install">ruby-install</a>能在任意目录中编译和安装不同版本的 Ruby。<br><a href="https://github.com/postmodern/chruby">chruby</a>用于在不同的 Ruby 版本之间切换。</p>
-<ul>
-<li><p>安装 ruby-install</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install ruby-install</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装指定 Ruby 版本</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ruby-install ruby <span class="number">2.4</span>.<span class="number">1</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>安装 chruby</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install chruby</div></pre></td></tr></table></figure>
-</li>
-<li><p>切换 Ruby 版本</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ chruby ruby-<span class="number">2.4</span>.<span class="number">1</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>修改脚本(<code>~/.bash_profile</code>或<code>~/.bashrc</code>或其它)</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">source /usr/local/opt/chruby/share/chruby/chruby.sh</div><div class="line">source /usr/local/opt/chruby/share/chruby/auto.sh</div><div class="line">chruby ruby-<span class="number">2.4</span>.<span class="number">1</span>  <span class="comment"># 设置默认版本号</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>更换仓库源为国内镜像：<br>查看源镜像</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem sources -l</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>删除国外源镜像<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem sources -r <span class="symbol">https:</span>/<span class="regexp">/rubygems.org/</span></div></pre></td></tr></table></figure></p>
-<p>添加国内源镜像<br>淘宝镜像已停止更新<code>https://ruby.taobao.org</code><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem sources -a <span class="symbol">https:</span>/<span class="regexp">/gems.ruby-china.org/</span></div></pre></td></tr></table></figure></p>
-<h3 id="通过Homebrew安装Ruby"><a href="#通过Homebrew安装Ruby" class="headerlink" title="通过Homebrew安装Ruby"></a>通过Homebrew安装Ruby</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install ruby</div></pre></td></tr></table></figure>
-<h3 id="通过RVM安装管理Ruby"><a href="#通过RVM安装管理Ruby" class="headerlink" title="通过RVM安装管理Ruby"></a>通过RVM安装管理Ruby</h3><p><a href="http://rvm.io/" target="_blank" rel="external">RVM</a> : Ruby Version Manager, Ruby版本管理器,包括Ruby的版本管理和Gem库管理(gemset).</p>
-<ul>
-<li><p>安装RVM</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ curl -L get.rvm.io <span class="params">| bash -s stable</span></div><div class="line"># 或者</div><div class="line">$ bash -s stable &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)</div></pre></td></tr></table></figure>
-<p>配置环境变量<code>~/.bash_profile</code></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[ -s <span class="string">"$HOME/.rvm/scripts/rvm"</span> ]] &amp;&amp; source <span class="string">"$HOME/.rvm/scripts/rvm"</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>使配置文件生效<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ source /Users/zhm/.rvm/scripts/rvm</div><div class="line">$ source ~/.bashrc</div><div class="line">$ source ~/.bash_profile</div></pre></td></tr></table></figure></p>
-<ul>
-<li>安装Ruby<br>查看可下载版本<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm list known</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>安装ruby最新版<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm install ruby --head</div></pre></td></tr></table></figure></p>
-<p>设置ruby使用版本<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm use [版本号] --default</div></pre></td></tr></table></figure></p>
-<ul>
-<li>升级<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm get head</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem update --system</div></pre></td></tr></table></figure>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ gem uninstall ruby</div><div class="line"><span class="comment"># 或者</span></div><div class="line">$ gems-update</div></pre></td></tr></table></figure>
-<ul>
-<li>查看版本<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm -v</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>若出现以下为安装好<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"rvm 1.14.5 (stable) by Wayne E. Seguin &lt;&lt;/span&gt;wayneeseguin@gmail.com&gt;, Michal Papis &lt;&lt;/span&gt;mpapis@gmail.com&gt; [https://rvm.io/]"</span></div></pre></td></tr></table></figure></p>
-<ul>
-<li>卸载<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ rvm implode</div><div class="line">$ cd ~ ; sudo rm -rf .rvm .rvmrc   /etc/rvmrc ;gem uninstall rvm</div><div class="line">$ cd ~ ; sudo rm -rf .rvm .rvmrc   /etc/rvmrc ;gem uninstall rvm</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Ruby</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/09/Ruby安装-Mac/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Homebrew环境安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/Homebrew环境安装/">Homebrew环境安装</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/09/Homebrew环境安装/" class="archive-article-date">
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/05/09/Homebrew环境安装/" class="archive-article-date">
   	<time datetime="2017-05-09T10:13:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><p>Homebrew是Mac OS X上没有包管理器，<a href="http://brew.sh" target="_blank" rel="external">Homebrew官网</a>上也有详细的安装和使用方法</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
-<li><p><strong>Homebrew</strong>需要<strong>Command Line Tools for Xcode</strong>环境，如果安装了<strong>Xcode</strong>不需再次安装，可跳过这一步，否则请打开终端输入以下代码完成安装：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ xcode-select --install</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装Homebrew</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /usr/bin/ruby -e <span class="string">"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>安装Homebrew的扩充<br><a href="https://github.com/caskroom/homebrew-cask">homebrew-cask</a>是对Homebrew的扩充，其基本用法与brew相同，只不过在brew后面加了一个cask单词<br>安装</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install caskroom/cask/brew-cask</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>安装软件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install google-chrome</div></pre></td></tr></table></figure></p>
-<p>卸载软件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask uninstall google-chrome</div></pre></td></tr></table></figure></p>
-<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><ul>
-<li><p>查看版本：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew -v</div></pre></td></tr></table></figure>
-</li>
-<li><p>更新</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ brew update  <span class="comment"># 更新Homebrew</span></div><div class="line">$ brew update &amp;&amp; brew upgrade  <span class="comment"># 同时更新已下载的软件</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>安装软件</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install wget  <span class="comment"># brew install PKG_NAME</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>卸载软件</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew uninstall wget  <span class="comment"># brew uninstall PKG_NAME</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>其它命令可调用help命令查看</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew help</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>可调出如下提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Example usage:</div><div class="line">  brew search [TEXT|/REGEX/]</div><div class="line">  brew (info|home|options) [FORMULA...]</div><div class="line">  brew install FORMULA...</div><div class="line">  brew update</div><div class="line">  brew upgrade [FORMULA...]</div><div class="line">  brew uninstall FORMULA...</div><div class="line">  brew list [FORMULA...]</div><div class="line"></div><div class="line">Troubleshooting:</div><div class="line">  brew config</div><div class="line">  brew doctor</div><div class="line">  brew install -vd FORMULA</div><div class="line"></div><div class="line">Developers:</div><div class="line">  brew create [URL [--no-fetch]]</div><div class="line">  brew edit [FORMULA...]</div><div class="line">  http://docs.brew.sh/Formula-Cookbook.html</div><div class="line"></div><div class="line">Further help:</div><div class="line">  man brew</div><div class="line">  brew help [COMMAND]</div><div class="line">  brew home</div></pre></td></tr></table></figure></p>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/05/09/Homebrew环境安装/">Homebrew环境安装</a>
+    </h1>
+  
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -325,87 +181,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/09/Homebrew环境安装/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
   
-    <article id="post-Cocoapods使用总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/Cocoapods使用总结/">Cocoapods使用总结</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/09/Cocoapods使用总结/" class="archive-article-date">
-  	<time datetime="2017-05-09T10:11:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>CocoaPods应该是iOS最常用最有名的类库管理工具，并且绝大部分有名的开源类库都支持CocoaPods，使用CocoaPods可以节约很多时间和很多补益药的麻烦。<br>下面介绍Cocoapods的基本用法，其<a href="https://cocoapods.org/" target="_blank" rel="external">官网</a>(<a href="https://github.com/CocoaPods/CocoaPods">GitHub</a>)中也有详细的文档。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>Cocoapods需要Ruby环境，<a href="https://tpspace.github.io/2017/05/09/Ruby%E5%8F%8AHomebrew%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" target="_blank" rel="external">这篇文章</a>介绍了Ruby的环境</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install cocoapods</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Cocoapods</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/09/Cocoapods使用总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -427,10 +215,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
