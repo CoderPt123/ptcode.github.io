@@ -362,87 +362,6 @@
 
 
   
-    <article id="post-多线程总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/10/多线程总结/">多线程总结</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/10/多线程总结/" class="archive-article-date">
-  	<time datetime="2017-05-10T01:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、多线程概述"><a href="#一、多线程概述" class="headerlink" title="一、多线程概述"></a>一、多线程概述</h2><h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><p>&emsp;&emsp;进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动，是操作系统进行资源分配和调度的一个独立单位；<br>&emsp;&emsp;线程是进程的一个实体，是CPU调度和分派的基本单位，是比进程更小的能独立运行的基本单位。<br>&emsp;&emsp;线程的划分尺度小于进程，这使得多线程程序的并发性高；进程在执行时通常拥有独立的内存单元，而线程之间可以共享内存。使用多线程的编程通常能够带来更好的性能和用户体验，但是多线程的程序对于其他程序是不友好的，因为它可能占用了更多的CPU资源。当然，也不是线程越多，程序的性能就越好，因为线程之间的调度和切换也会浪费CPU时间。</p>
-<h3 id="串行和并行"><a href="#串行和并行" class="headerlink" title="串行和并行"></a>串行和并行</h3><p>&emsp;&emsp;当一个线程执行多个任务，会采用执行完一个再执行下一个的方式，这种执行任务的方式称为串行；多个线程分担多个任务，不同的任务同时执行，这种执行任务的方式称为并发。</p>
-<h3 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h3><p>&emsp;&emsp;同步是指当前一个任务未能完成时，后一个任务被阻塞；异步可以理解为不同的任务在不同的线程中执行，当开辟的子线程（工作线程）发生阻塞，主线程或其他线程不会受到影响。</p>
-<blockquote>
-<p><strong>说明</strong>：异步和并发的概念不完全相同，异步强调解决主线程阻塞的问题，而并发一般指子线程（工作线程）之间的关系，多个工作线程分担任务称为并发执行任务。</p>
-</blockquote>
-<h3 id="多线程的实现方式"><a href="#多线程的实现方式" class="headerlink" title="多线程的实现方式"></a>多线程的实现方式</h3><p>iOS开发中实现多线程的方式很多，包括：</p>
-<ul>
-<li>POSIX线程：简称Pthreads，是线程的POSIX标准，该标准定义了创建和操作线程的一套API，是由C语言实现的，例如pthread_create()函数可以创建线程，pthread_exit()函数可以终止当前线程，pthread_mutex_init()函数可以初始化互斥锁等等，使用这种方式操作线程需要扎实的C编程功底以及对系统底层工作机制的认识。</li>
-<li>NSThread类：线程，此种方式是轻量级的线程机制，但需要自行管理线程的生命周期，线程同步等问题，同步锁会产生系统开销。</li>
-<li>NSOperationQueue类：执行队列，优点是不需要关心线程管理，数据同步的事情，可以把精力放在线程需要执行的操作上。</li>
-<li>GCD：Grand Central Dispatch，是苹果公司开发的技术，以优化的应用程序支持多核心处理器和其他的对称多处理系统的系统。这建立在任务并行执行的线程池模式的基础上的。它首次发布在Mac OS X 10.6，iOS 4及以上也可以使用，该技术是取代上述技术的技术。</li>
-</ul>
-<h2 id="二、NSThread"><a href="#二、NSThread" class="headerlink" title="二、NSThread"></a>二、NSThread</h2><h3 id="创建线程：有三种创建线程的方式"><a href="#创建线程：有三种创建线程的方式" class="headerlink" title="创建线程：有三种创建线程的方式"></a>创建线程：有三种创建线程的方式</h3><ol>
-<li><p><code>detachNewThreadSelector:toTarget:withObject:</code><br>分离主线程创建，会自动执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[NSThread detachNewThreadSelector:(SEL)aSelector toTarget:(id)aTarget withObject:(id)anArgument];</div></pre></td></tr></table></figure>
-</li>
-<li><p><code>initWithTarget:selector:object:</code><br>对象方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">NSThread *thread = [[NSThread alloc] initWithTarget:(id)aTarget selector:(SEL)aSelector object:(id)anArgument];</div><div class="line">[thread start];</div></pre></td></tr></table></figure>
-</li>
-<li><p><code>performSelectorInBackground:withObject:</code></p>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程, GCD</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/10/多线程总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
     <article id="post-常用开发工具和第三方库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -929,11 +848,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Homebrew</a>
+                <a href="javascript:void(0)" class="js-tag color5">Cocoapods</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Cocoapods</a>
+                <a href="javascript:void(0)" class="js-tag color4">Homebrew</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -942,14 +861,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">多线程, NSThread</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">多线程, GCD</a>
               </li>
              
               <li class="article-tag-list-item">
