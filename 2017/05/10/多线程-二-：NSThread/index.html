@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.com/tpspace">
-  <title>TPSpace.GitHub.io</title>
+  <title>多线程(二)：NSThread | TPSpace.GitHub.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="彭涛的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TPSpace.GitHub.io">
-<meta property="og:url" content="http://github.com/tpspace/index.html">
+  <meta name="description" content="开启线程 分离主线程创建：创建线程后会自动执行，但是线程外部不可获取到该线程对象detachNewThreadWithBlock:detachNewThreadSelector:toTarget:withObject: 1234567+ (void)detachNewThreadWithBlock:(void (^)(void))block API_AVAILABLE(macosx(10.12),">
+<meta name="keywords" content="多线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多线程(二)：NSThread">
+<meta property="og:url" content="http://github.com/tpspace/2017/05/10/多线程-二-：NSThread/index.html">
 <meta property="og:site_name" content="TPSpace.GitHub.io">
-<meta property="og:description" content="彭涛的博客">
+<meta property="og:description" content="开启线程 分离主线程创建：创建线程后会自动执行，但是线程外部不可获取到该线程对象detachNewThreadWithBlock:detachNewThreadSelector:toTarget:withObject: 1234567+ (void)detachNewThreadWithBlock:(void (^)(void))block API_AVAILABLE(macosx(10.12),">
+<meta property="og:updated_time" content="2017-05-10T02:28:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TPSpace.GitHub.io">
-<meta name="twitter:description" content="彭涛的博客">
+<meta name="twitter:title" content="多线程(二)：NSThread">
+<meta name="twitter:description" content="开启线程 分离主线程创建：创建线程后会自动执行，但是线程外部不可获取到该线程对象detachNewThreadWithBlock:detachNewThreadSelector:toTarget:withObject: 1234567+ (void)detachNewThreadWithBlock:(void (^)(void))block API_AVAILABLE(macosx(10.12),">
   
     <link rel="alternative" href="/atom.xml" title="TPSpace.GitHub.io" type="application/atom+xml">
   
@@ -140,16 +142,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-多线程-二-：NSThread" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-多线程-二-：NSThread" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/10/多线程-二-：NSThread/">多线程(二)：NSThread</a>
+    <h1 class="article-title" itemprop="name">
+      多线程(二)：NSThread
     </h1>
   
 
@@ -275,576 +275,85 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/10/多线程-二-：NSThread/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://github.com/tpspace/2017/05/10/多线程-二-：NSThread/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-多线程-一-：概述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/10/多线程-一-：概述/">多线程(一)：概述</a>
-    </h1>
   
-
-        
-        <a href="/2017/05/10/多线程-一-：概述/" class="archive-article-date">
-  	<time datetime="2017-05-10T02:04:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><p>&emsp;&emsp;进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动，是操作系统进行资源分配和调度的一个独立单位；<br>&emsp;&emsp;线程是进程的一个实体，是CPU调度和分派的基本单位，是比进程更小的能独立运行的基本单位。<br>&emsp;&emsp;线程的划分尺度小于进程，这使得多线程程序的并发性高；进程在执行时通常拥有独立的内存单元，而线程之间可以共享内存。使用多线程的编程通常能够带来更好的性能和用户体验，但是多线程的程序对于其他程序是不友好的，因为它可能占用了更多的CPU资源。当然，也不是线程越多，程序的性能就越好，因为线程之间的调度和切换也会浪费CPU时间。</p>
-<h3 id="串行和并行"><a href="#串行和并行" class="headerlink" title="串行和并行"></a>串行和并行</h3><p>&emsp;&emsp;当一个线程执行多个任务，会采用执行完一个再执行下一个的方式，这种执行任务的方式称为串行；多个线程分担多个任务，不同的任务同时执行，这种执行任务的方式称为并发。</p>
-<h3 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h3><p>&emsp;&emsp;同步是指当前一个任务未能完成时，后一个任务被阻塞；异步可以理解为不同的任务在不同的线程中执行，当开辟的子线程（工作线程）发生阻塞，主线程或其他线程不会受到影响。</p>
-<blockquote>
-<p><strong>说明</strong>：异步和并发的概念不完全相同，异步强调解决主线程阻塞的问题，而并发一般指子线程（工作线程）之间的关系，多个工作线程分担任务称为并发执行任务。</p>
-</blockquote>
-<h3 id="多线程的实现方式"><a href="#多线程的实现方式" class="headerlink" title="多线程的实现方式"></a>多线程的实现方式</h3><p>iOS开发中实现多线程的方式很多，包括：</p>
-<ul>
-<li>POSIX线程：简称Pthreads，是线程的POSIX标准，该标准定义了创建和操作线程的一套API，是由C语言实现的，例如pthread_create()函数可以创建线程，pthread_exit()函数可以终止当前线程，pthread_mutex_init()函数可以初始化互斥锁等等，使用这种方式操作线程需要扎实的C编程功底以及对系统底层工作机制的认识。</li>
-<li>NSThread类：线程，此种方式是轻量级的线程机制，但需要自行管理线程的生命周期，线程同步等问题，同步锁会产生系统开销。</li>
-<li>NSOperationQueue类：执行队列，优点是不需要关心线程管理，数据同步的事情，可以把精力放在线程需要执行的操作上。</li>
-<li>GCD：Grand Central Dispatch，是苹果公司开发的技术，以优化的应用程序支持多核心处理器和其他的对称多处理系统的系统。这建立在任务并行执行的线程池模式的基础上的。它首次发布在Mac OS X 10.6，iOS 4及以上也可以使用，该技术是取代上述技术的技术。</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/10/多线程-一-：概述/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2017/05/10/多线程-一-：概述/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">多线程(一)：概述</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-多线程总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/10/多线程总结/">多线程总结</a>
-    </h1>
   
 
-        
-        <a href="/2017/05/10/多线程总结/" class="archive-article-date">
-  	<time datetime="2017-05-10T01:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、多线程概述"><a href="#一、多线程概述" class="headerlink" title="一、多线程概述"></a>一、多线程概述</h2><h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><p>&emsp;&emsp;进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动，是操作系统进行资源分配和调度的一个独立单位；<br>&emsp;&emsp;线程是进程的一个实体，是CPU调度和分派的基本单位，是比进程更小的能独立运行的基本单位。<br>&emsp;&emsp;线程的划分尺度小于进程，这使得多线程程序的并发性高；进程在执行时通常拥有独立的内存单元，而线程之间可以共享内存。使用多线程的编程通常能够带来更好的性能和用户体验，但是多线程的程序对于其他程序是不友好的，因为它可能占用了更多的CPU资源。当然，也不是线程越多，程序的性能就越好，因为线程之间的调度和切换也会浪费CPU时间。</p>
-<h3 id="串行和并行"><a href="#串行和并行" class="headerlink" title="串行和并行"></a>串行和并行</h3><p>&emsp;&emsp;当一个线程执行多个任务，会采用执行完一个再执行下一个的方式，这种执行任务的方式称为串行；多个线程分担多个任务，不同的任务同时执行，这种执行任务的方式称为并发。</p>
-<h3 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h3><p>&emsp;&emsp;同步是指当前一个任务未能完成时，后一个任务被阻塞；异步可以理解为不同的任务在不同的线程中执行，当开辟的子线程（工作线程）发生阻塞，主线程或其他线程不会受到影响。</p>
-<blockquote>
-<p><strong>说明</strong>：异步和并发的概念不完全相同，异步强调解决主线程阻塞的问题，而并发一般指子线程（工作线程）之间的关系，多个工作线程分担任务称为并发执行任务。</p>
-</blockquote>
-<h3 id="多线程的实现方式"><a href="#多线程的实现方式" class="headerlink" title="多线程的实现方式"></a>多线程的实现方式</h3><p>iOS开发中实现多线程的方式很多，包括：</p>
-<ul>
-<li>POSIX线程：简称Pthreads，是线程的POSIX标准，该标准定义了创建和操作线程的一套API，是由C语言实现的，例如pthread_create()函数可以创建线程，pthread_exit()函数可以终止当前线程，pthread_mutex_init()函数可以初始化互斥锁等等，使用这种方式操作线程需要扎实的C编程功底以及对系统底层工作机制的认识。</li>
-<li>NSThread类：线程，此种方式是轻量级的线程机制，但需要自行管理线程的生命周期，线程同步等问题，同步锁会产生系统开销。</li>
-<li>NSOperationQueue类：执行队列，优点是不需要关心线程管理，数据同步的事情，可以把精力放在线程需要执行的操作上。</li>
-<li>GCD：Grand Central Dispatch，是苹果公司开发的技术，以优化的应用程序支持多核心处理器和其他的对称多处理系统的系统。这建立在任务并行执行的线程池模式的基础上的。它首次发布在Mac OS X 10.6，iOS 4及以上也可以使用，该技术是取代上述技术的技术。</li>
-</ul>
-<h2 id="二、NSThread"><a href="#二、NSThread" class="headerlink" title="二、NSThread"></a>二、NSThread</h2><h3 id="创建线程：有三种创建线程的方式"><a href="#创建线程：有三种创建线程的方式" class="headerlink" title="创建线程：有三种创建线程的方式"></a>创建线程：有三种创建线程的方式</h3><ol>
-<li><p><code>detachNewThreadSelector:toTarget:withObject:</code><br>分离主线程创建，会自动执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[NSThread detachNewThreadSelector:(SEL)aSelector toTarget:(id)aTarget withObject:(id)anArgument];</div></pre></td></tr></table></figure>
-</li>
-<li><p><code>initWithTarget:selector:object:</code><br>对象方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">NSThread *thread = [[NSThread alloc] initWithTarget:(id)aTarget selector:(SEL)aSelector object:(id)anArgument];</div><div class="line">[thread start];</div></pre></td></tr></table></figure>
-</li>
-<li><p><code>performSelectorInBackground:withObject:</code></p>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程, GCD</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/10/多线程总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-常用开发工具和第三方库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/10/常用开发工具和第三方库/">常用开发工具和第三方库</a>
-    </h1>
   
 
-        
-        <a href="/2017/05/10/常用开发工具和第三方库/" class="archive-article-date">
-  	<time datetime="2017-05-10T01:15:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="常用开发工具"><a href="#常用开发工具" class="headerlink" title="常用开发工具"></a>常用开发工具</h2><ul>
-<li><a href="http://pad.haroopress.com/" target="_blank" rel="external">Haroopad</a>：Markdown编辑器</li>
-<li><a href="http://www.sublimetext.com" target="_blank" rel="external">Sublime</a>：一款强大的IDE,支持Python、JS、JSON格式化等等…更重要的是<code>Sublime</code>支持的插件很多。<ul>
-<li><a href="http://www.xuanfengge.com/practical-collection-of-sublime-plug-in.html" target="_blank" rel="external">实用的sublime插件集合</a></li>
-</ul>
-</li>
-<li><a href="https://www.getpostman.com/" target="_blank" rel="external">PostMan</a>：是一款功能强大的免费的HTTP调试工具，有各个桌面平台客户端和chrome插件</li>
-<li><a href="https://kapeli.com/dash" target="_blank" rel="external">Dash</a>：文档查看工具</li>
-<li><a href="https://github.com/fpillet/NSLogger">NSLogger</a>：日志查看工具，离线监控局域网内设备的日志，app内需集成NSLogger库</li>
-<li><a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a>：图形化的Git工具</li>
-<li><a href="www.cornerstone.org.uk/">Cornerstone</a>：SVN工具</li>
-<li><a href="http://www.datumapps.com/" target="_blank" rel="external">Datum Free</a>：简易的SQLite管理工具</li>
-<li><a href="https://www.navicat.com.cn/" target="_blank" rel="external">Navicat Premium</a>： 功能强大数据库管理工具，支持多种数据库，和远程连接</li>
-<li><a href="https://revealapp.com/" target="_blank" rel="external">Reveal</a>：UI分析工具</li>
-<li><a href="https://github.com/answer-huang/dSYMTools">DSYMTools</a>：dSYM分析工具</li>
-<li><a href="https://github.com/chenxtdo/UPImageMacApp">PicU</a>：图片上传工具</li>
-<li><a href="https://www.charlesproxy.com/" target="_blank" rel="external">Charles</a>：青花瓷, 一款HTTP/HTTPS的抓包工具。<ul>
-<li><a href="http://blog.devtang.com/2015/11/14/charles-introduction/" target="_blank" rel="external">Charles 从入门到精通</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/getlantern/lantern">lantern</a> 蓝灯，翻墙工具。</li>
-</ul>
-<h2 id="常用第三方库"><a href="#常用第三方库" class="headerlink" title="常用第三方库"></a>常用第三方库</h2><ul>
-<li><a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a>：HTTP网络请求库</li>
-<li><a href="https://github.com/SnapKit/Masonry">Masonry</a>：自动布局</li>
-<li><a href="https://github.com/CoderMJLee/MJRefresh">MJRefresh</a>：下拉/上拉刷新</li>
-<li><a href="https://github.com/CoderMJLee/MJExtension">MJExtension</a>：是一套字典和模型之间互相转换的超轻量级框架</li>
-<li><a href="https://github.com/hackiftekhar/IQKeyboardManager">IQKeyboardManager</a>：解决弹起键盘遮盖输入框的问题</li>
-<li><a href="https://github.com/soffes/SAMKeychain">SAMKeychain</a>：钥匙串存取数据</li>
-<li><a href="https://github.com/rs/SDWebImage">SDWebImage</a>：图片加载库</li>
-<li><a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a>：简单高效的日志框架</li>
-<li><a href="https://github.com/fpillet/NSLogger">NSLogger</a>：日志框架，配合App可离线监控局域网内设备的日志，摆脱Xcode的控制台</li>
-<li><a href="git@github.com:Flipboard/FLEX">FLEX</a>：应用内调试和探测工具集</li>
-<li><a href="https://github.com/AliSoftware/OHHTTPStubs">OHHTTPStubs</a>：模拟返回网络数据，用于加速测试和开发</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/10/常用开发工具和第三方库/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Ruby安装-Mac" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/Ruby安装-Mac/">Ruby安装(Mac)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/09/Ruby安装-Mac/" class="archive-article-date">
-  	<time datetime="2017-05-09T12:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Ruby安装"><a href="#Ruby安装" class="headerlink" title="Ruby安装"></a><a href="https://ruby-china.org/" target="_blank" rel="external">Ruby</a>安装</h2><h3 id="ruby-install-和-chruby-管理-Ruby"><a href="#ruby-install-和-chruby-管理-Ruby" class="headerlink" title="ruby-install 和 chruby 管理 Ruby"></a>ruby-install 和 chruby 管理 Ruby</h3><p><a href="https://github.com/postmodern/ruby-install">ruby-install</a>能在任意目录中编译和安装不同版本的 Ruby。<br><a href="https://github.com/postmodern/chruby">chruby</a>用于在不同的 Ruby 版本之间切换。</p>
-<ul>
-<li><p>安装 ruby-install</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install ruby-install</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装指定 Ruby 版本</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ruby-install ruby <span class="number">2.4</span>.<span class="number">1</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>安装 chruby</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install chruby</div></pre></td></tr></table></figure>
-</li>
-<li><p>切换 Ruby 版本</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ chruby ruby-<span class="number">2.4</span>.<span class="number">1</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>修改脚本(<code>~/.bash_profile</code>或<code>~/.bashrc</code>或其它)</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">source /usr/local/opt/chruby/share/chruby/chruby.sh</div><div class="line">source /usr/local/opt/chruby/share/chruby/auto.sh</div><div class="line">chruby ruby-<span class="number">2.4</span>.<span class="number">1</span>  <span class="comment"># 设置默认版本号</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>更换仓库源为国内镜像：<br>查看源镜像</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem sources -l</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>删除国外源镜像<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem sources -r <span class="symbol">https:</span>/<span class="regexp">/rubygems.org/</span></div></pre></td></tr></table></figure></p>
-<p>添加国内源镜像<br>淘宝镜像已停止更新<code>https://ruby.taobao.org</code><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem sources -a <span class="symbol">https:</span>/<span class="regexp">/gems.ruby-china.org/</span></div></pre></td></tr></table></figure></p>
-<h3 id="通过Homebrew安装Ruby"><a href="#通过Homebrew安装Ruby" class="headerlink" title="通过Homebrew安装Ruby"></a>通过Homebrew安装Ruby</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install ruby</div></pre></td></tr></table></figure>
-<h3 id="通过RVM安装管理Ruby"><a href="#通过RVM安装管理Ruby" class="headerlink" title="通过RVM安装管理Ruby"></a>通过RVM安装管理Ruby</h3><p><a href="http://rvm.io/" target="_blank" rel="external">RVM</a> : Ruby Version Manager, Ruby版本管理器,包括Ruby的版本管理和Gem库管理(gemset).</p>
-<ul>
-<li><p>安装RVM</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ curl -L get.rvm.io <span class="params">| bash -s stable</span></div><div class="line"># 或者</div><div class="line">$ bash -s stable &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)</div></pre></td></tr></table></figure>
-<p>配置环境变量<code>~/.bash_profile</code></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[ -s <span class="string">"$HOME/.rvm/scripts/rvm"</span> ]] &amp;&amp; source <span class="string">"$HOME/.rvm/scripts/rvm"</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>使配置文件生效<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ source /Users/zhm/.rvm/scripts/rvm</div><div class="line">$ source ~/.bashrc</div><div class="line">$ source ~/.bash_profile</div></pre></td></tr></table></figure></p>
-<ul>
-<li>安装Ruby<br>查看可下载版本<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm list known</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>安装ruby最新版<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm install ruby --head</div></pre></td></tr></table></figure></p>
-<p>设置ruby使用版本<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm use [版本号] --default</div></pre></td></tr></table></figure></p>
-<ul>
-<li>升级<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm get head</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem update --system</div></pre></td></tr></table></figure>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ gem uninstall ruby</div><div class="line"><span class="comment"># 或者</span></div><div class="line">$ gems-update</div></pre></td></tr></table></figure>
-<ul>
-<li>查看版本<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rvm -v</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>若出现以下为安装好<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"rvm 1.14.5 (stable) by Wayne E. Seguin &lt;&lt;/span&gt;wayneeseguin@gmail.com&gt;, Michal Papis &lt;&lt;/span&gt;mpapis@gmail.com&gt; [https://rvm.io/]"</span></div></pre></td></tr></table></figure></p>
-<ul>
-<li>卸载<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ rvm implode</div><div class="line">$ cd ~ ; sudo rm -rf .rvm .rvmrc   /etc/rvmrc ;gem uninstall rvm</div><div class="line">$ cd ~ ; sudo rm -rf .rvm .rvmrc   /etc/rvmrc ;gem uninstall rvm</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Ruby</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/09/Ruby安装-Mac/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Homebrew环境安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/Homebrew环境安装/">Homebrew环境安装</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/09/Homebrew环境安装/" class="archive-article-date">
-  	<time datetime="2017-05-09T10:13:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><p>Homebrew是Mac OS X上没有包管理器，<a href="http://brew.sh" target="_blank" rel="external">Homebrew官网</a>上也有详细的安装和使用方法</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
-<li><p><strong>Homebrew</strong>需要<strong>Command Line Tools for Xcode</strong>环境，如果安装了<strong>Xcode</strong>不需再次安装，可跳过这一步，否则请打开终端输入以下代码完成安装：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ xcode-select --install</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装Homebrew</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /usr/bin/ruby -e <span class="string">"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>安装Homebrew的扩充<br><a href="https://github.com/caskroom/homebrew-cask">homebrew-cask</a>是对Homebrew的扩充，其基本用法与brew相同，只不过在brew后面加了一个cask单词<br>安装</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install caskroom/cask/brew-cask</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>安装软件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install google-chrome</div></pre></td></tr></table></figure></p>
-<p>卸载软件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask uninstall google-chrome</div></pre></td></tr></table></figure></p>
-<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><ul>
-<li><p>查看版本：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew -v</div></pre></td></tr></table></figure>
-</li>
-<li><p>更新</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ brew update  <span class="comment"># 更新Homebrew</span></div><div class="line">$ brew update &amp;&amp; brew upgrade  <span class="comment"># 同时更新已下载的软件</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>安装软件</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install wget  <span class="comment"># brew install PKG_NAME</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>卸载软件</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew uninstall wget  <span class="comment"># brew uninstall PKG_NAME</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>其它命令可调用help命令查看</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew help</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>可调出如下提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Example usage:</div><div class="line">  brew search [TEXT|/REGEX/]</div><div class="line">  brew (info|home|options) [FORMULA...]</div><div class="line">  brew install FORMULA...</div><div class="line">  brew update</div><div class="line">  brew upgrade [FORMULA...]</div><div class="line">  brew uninstall FORMULA...</div><div class="line">  brew list [FORMULA...]</div><div class="line"></div><div class="line">Troubleshooting:</div><div class="line">  brew config</div><div class="line">  brew doctor</div><div class="line">  brew install -vd FORMULA</div><div class="line"></div><div class="line">Developers:</div><div class="line">  brew create [URL [--no-fetch]]</div><div class="line">  brew edit [FORMULA...]</div><div class="line">  http://docs.brew.sh/Formula-Cookbook.html</div><div class="line"></div><div class="line">Further help:</div><div class="line">  man brew</div><div class="line">  brew help [COMMAND]</div><div class="line">  brew home</div></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Homebrew</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/09/Homebrew环境安装/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Cocoapods使用总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/Cocoapods使用总结/">Cocoapods使用总结</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/09/Cocoapods使用总结/" class="archive-article-date">
-  	<time datetime="2017-05-09T10:11:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>CocoaPods应该是iOS最常用最有名的类库管理工具，并且绝大部分有名的开源类库都支持CocoaPods，使用CocoaPods可以节约很多时间和很多不必要的麻烦。<br>下面介绍Cocoapods的基本用法，其<a href="https://cocoapods.org/" target="_blank" rel="external">官网</a>(<a href="https://github.com/CocoaPods/CocoaPods">GitHub</a>)中也有详细的文档。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>Cocoapods需要Ruby环境，<a href="https://tpspace.github.io/2017/05/09/Ruby%E5%8F%8AHomebrew%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" target="_blank" rel="external">这篇文章</a>介绍了安装Ruby的环境</p>
-<ul>
-<li><p>升级gem</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo gem update --system</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装Cocoapods<br>Cocoapods的文件夹是<code>~/.cocoapods</code></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install cocoapods</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看版本号</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pod --version</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="设置和使用Cocoapods"><a href="#设置和使用Cocoapods" class="headerlink" title="设置和使用Cocoapods"></a>设置和使用Cocoapods</h3><ul>
-<li><p>建立仓库</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pod setup</div></pre></td></tr></table></figure>
-</li>
-<li><p>更新仓库</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pod repo update</div></pre></td></tr></table></figure>
-</li>
-<li><p>搜索第三方仓库</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pod search 库名</div></pre></td></tr></table></figure>
-</li>
-<li><p>添加/更新类库</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pod install</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>添加/更新类库时忽略repo可加快执行速度:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ pod install --verbose --no-repo-update</div><div class="line">$ pod update --verbose --no-repo-update</div><div class="line"><span class="comment">#或者</span></div><div class="line">$ pod install --no-repo-update</div><div class="line">$ pod update --no-repo-update</div></pre></td></tr></table></figure></p>
-<h3 id="卸载和降级"><a href="#卸载和降级" class="headerlink" title="卸载和降级"></a>卸载和降级</h3><ol>
-<li>移除pod组件，查看pod的安装位置<br>查看pod的安装位置<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ which pod</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>手动删除这个组件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo rm -rf &lt;path&gt;</div></pre></td></tr></table></figure></p>
-<ol>
-<li>查看 RubyGems 中的 Cocoapods程序包<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem list</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>得:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">*** LOCAL GEMS ***</div><div class="line"></div><div class="line">activesupport (<span class="number">5.0</span>.<span class="number">0</span>.<span class="number">1</span>, <span class="number">4.2</span>.<span class="number">7.1</span>)</div><div class="line">bigdecimal (<span class="symbol">default:</span> <span class="number">1.2</span>.<span class="number">8</span>)</div><div class="line">claide (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">cocoapods (<span class="number">1.1</span>.<span class="number">0</span>.rc.<span class="number">2</span>, <span class="number">1.0</span>.<span class="number">1</span>)</div><div class="line">cocoapods-core (<span class="number">1.1</span>.<span class="number">0</span>.rc.<span class="number">2</span>, <span class="number">1.0</span>.<span class="number">1</span>)</div><div class="line">cocoapods-deintegrate (<span class="number">1.0</span>.<span class="number">1</span>)</div><div class="line">cocoapods-downloader (<span class="number">1.1</span>.<span class="number">1</span>)</div><div class="line">cocoapods-plugins (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">cocoapods-search (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">cocoapods-stats (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">cocoapods-trunk (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">cocoapods-try (<span class="number">1.1</span>.<span class="number">0</span>)</div><div class="line">colored (<span class="number">1.2</span>)</div><div class="line">concurrent-ruby (<span class="number">1.0</span>.<span class="number">2</span>)</div><div class="line">did_you_mean (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">escape (<span class="number">0</span>.<span class="number">0</span>.<span class="number">4</span>)</div><div class="line">fourflusher (<span class="number">1.0</span>.<span class="number">1</span>, <span class="number">0</span>.<span class="number">3.2</span>)</div><div class="line">fuzzy_match (<span class="number">2.0</span>.<span class="number">4</span>)</div><div class="line">gh_inspector (<span class="number">1.0</span>.<span class="number">2</span>)</div><div class="line">i18n (<span class="number">0</span>.<span class="number">7.0</span>)</div><div class="line">io-console (<span class="symbol">default:</span> <span class="number">0</span>.<span class="number">4.5</span>)</div><div class="line">json (<span class="symbol">default:</span> <span class="number">1.8</span>.<span class="number">3</span>)</div><div class="line">minitest (<span class="number">5.8</span>.<span class="number">3</span>)</div><div class="line">molinillo (<span class="number">0</span>.<span class="number">5.1</span>, <span class="number">0</span>.<span class="number">4.5</span>)</div><div class="line">nap (<span class="number">1.1</span>.<span class="number">0</span>)</div><div class="line">net-telnet (<span class="number">0</span>.<span class="number">1.1</span>)</div><div class="line">netrc (<span class="number">0</span>.<span class="number">7.8</span>)</div><div class="line">power_assert (<span class="number">0</span>.<span class="number">2.6</span>)</div><div class="line">psych (<span class="symbol">default:</span> <span class="number">2.0</span>.<span class="number">17</span>)</div><div class="line">rake (<span class="number">10.4</span>.<span class="number">2</span>)</div><div class="line">rdoc (<span class="symbol">default:</span> <span class="number">4.2</span>.<span class="number">1</span>)</div><div class="line">rubygems-update (<span class="number">2.6</span>.<span class="number">7</span>)</div><div class="line">test-unit (<span class="number">3.1</span>.<span class="number">5</span>)</div><div class="line">thread_safe (<span class="number">0</span>.<span class="number">3.5</span>)</div><div class="line">tzinfo (<span class="number">1.2</span>.<span class="number">2</span>)</div><div class="line">xcodeproj (<span class="number">1.3</span>.<span class="number">1</span>)</div></pre></td></tr></table></figure></p>
-<p>coapods的程序包:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">cocoapods (<span class="number">1.1</span>.<span class="number">0</span>.rc.<span class="number">2</span>, <span class="number">1.0</span>.<span class="number">1</span>)</div><div class="line">cocoapods-core (<span class="number">1.1</span>.<span class="number">0</span>.rc.<span class="number">2</span>, <span class="number">1.0</span>.<span class="number">1</span>)</div><div class="line">cocoapods-deintegrate (<span class="number">1.0</span>.<span class="number">1</span>)</div><div class="line">cocoapods-downloader (<span class="number">1.1</span>.<span class="number">1</span>)</div><div class="line">cocoapods-plugins (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">cocoapods-search (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">cocoapods-stats (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">cocoapods-trunk (<span class="number">1.0</span>.<span class="number">0</span>)</div><div class="line">cocoapods-try (<span class="number">1.1</span>.<span class="number">0</span>)</div></pre></td></tr></table></figure></p>
-<ol>
-<li>卸载指定版本<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo gem uninstall cocoapods -v &lt;版本号&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>输出:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Successfully uninstalled cocoapods&lt;版本号&gt;</div></pre></td></tr></table></figure></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo gem uninstall cocoapods-core -v &lt;版本号&gt;</div><div class="line">......</div></pre></td></tr></table></figure>
-<ol>
-<li>下载指定版本<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo gem install cocoapods -v &lt;版本号&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Cocoapods</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/09/Cocoapods使用总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -867,8 +376,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
